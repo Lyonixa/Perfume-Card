@@ -106,4 +106,5 @@ button {
   margin-top: 1rem;
   display: flex;
   gap: 0.625rem;
+  width: max-content;
 }
