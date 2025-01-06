@@ -66,13 +66,13 @@ button {
 body {
   background-color: var(--cream);
   margin: 0;
-  padding: 1.75rem 1rem;
-  height: 100vh;
 }
 
 main {
+  padding: 1.75rem 1rem;
   display: grid;
   place-items: center;
+  min-height: 100vh;
 }
 
 .product-card {
@@ -122,6 +122,10 @@ button {
   body {
     height: 100vh;
     padding: 0;
+  }
+
+  main {
+    height: 100vh;
   }
 
   .product-card {
