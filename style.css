@@ -8,6 +8,9 @@
   --font-fraunces: "Fraunces", serif;
 }
 
+* {
+  box-sizing: border-box;
+}
 /* TYPOGRAPHY */
 
 .perfume {
@@ -23,6 +26,7 @@ h1 {
   font-family: var(--font-fraunces);
   font-size: 2rem;
   font-weight: 700px;
+  line-height: 2rem;
   color: var(--dark-blue);
 }
 
@@ -65,6 +69,7 @@ body {
   display: grid;
   place-items: center;
   padding: 1.75rem 1rem;
+  height: 100vh;
 }
 
 .product-card {
@@ -86,7 +91,6 @@ body {
 h1 {
   margin-top: 0.9375rem;
   margin-bottom: 1.125rem;
-  line-height: 2rem;
 }
 
 .description {
@@ -101,10 +105,67 @@ h1 {
 }
 
 button {
-  padding: 1rem 5.625rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   margin-top: 1rem;
   display: flex;
+  justify-content: center;
   gap: 0.625rem;
-  width: max-content;
+  width: 100%;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  body {
+    height: 100vh;
+    padding: 0;
+  }
+
+  .product-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-width: 600px;
+    margin: 50px;
+  }
+
+  .product-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 33px 33px 33px;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    line-height: 2.3rem;
+    margin-bottom: 0;
+  }
+
+  .perfume {
+    font-size: 0.85rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.5375rem;
+    margin-bottom: 1rem;
+  }
+
+  .new-price {
+    font-size: 2.4rem;
+  }
+
+  .old-price {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  button:hover {
+    background: #1a4031;
+  }
 }
